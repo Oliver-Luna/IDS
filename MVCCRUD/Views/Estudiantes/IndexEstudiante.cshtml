@@ -1,0 +1,71 @@
+﻿@model IEnumerable<MVCCRUD.Models.Estudiante>
+
+@{
+    ViewData["Title"] = "IndexEstudiante";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="CreateEstudiante" class="btn btn-success">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Carnet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+             <th>
+                @Html.DisplayNameFor(model => model.PrimerParcial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SegundoParcial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sistematico)
+            </th>
+              <th>
+                @Html.DisplayNameFor(model => model.NotaFinal)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Carnet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.PrimerParcial)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.SegundoParcial)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.Sistematico)
+            </td>
+             <td>
+                @Html.DisplayFor(modelItem => item.NotaFinal)
+            </td>
+            <td>
+                    <a asp-action="EditEstudiante" class="btn btn-warning" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="DetailsEstudiante" class="btn btn-primary" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="DeleteEstudiante" class="btn btn-danger" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

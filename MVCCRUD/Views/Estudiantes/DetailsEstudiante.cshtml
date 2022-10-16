@@ -1,0 +1,60 @@
+﻿@model MVCCRUD.Models.Estudiante
+
+@{
+    ViewData["Title"] = "DetailsEstudiante";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Estudiante</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Carnet)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Carnet)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrimerParcial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrimerParcial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SegundoParcial)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SegundoParcial)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sistematico)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sistematico)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NotaFinal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NotaFinal)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="EditEstdiante" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="IndexEstudiante">Back to List</a>
+</div>
